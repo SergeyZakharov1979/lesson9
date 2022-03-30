@@ -1,0 +1,271 @@
+/* 
+! Тексттовые свойства
+?font+
+? font-family+
+? font-style+
+? font-variant+
+? font-size+
+? line-height+
+? font-weight+
+
+! Шрифтовые свойства
+? text-align+
+? vertical-align+(особое внимание)
+http://htmlbook.ru/css/vertical-align
+? letter-spacing+
+? word-spasing+
+? text-indent+
+? text-transform+
+? text-decoration+
+? text-shadow+
+? color+
+? @font-face (подключение шрифтов разными способами)+(ocoбое внимание: трансфонтеры, GoogleFonts)
+? word-wrap+
+? white-space+(особое внимание)
+
+!Блочно-строчная модель документа
+? width, max-width, min-width
+https://habr.com/ru/post/483634/
+http://htmlbook.ru/samlayout/blochnaya-verstka/blochnaya-model
+? padding+
+? margin(схлопывание)+
+http://htmlbook.ru/samlayout/blochnaya-verstka/skhlopyvayushchiesya-otstupy
+? overflow+(особое внимание)
+? стилизация ссылок+
+? img+(особое внимание)
+? display: inline-block+(особое внимание)
+https://css-live.ru/articles/zagadochnye-otstupy-mezhdu-inlajn-blokami.html
+? display: block+
+? Валидатор (особое внимание)+
+? git и github (особое внимание)+
+
+!Оформление
+? outline+
+? border (transparent)+
+? border-radius+
+? opasity+
+? visibility+
+? box-shadow (filter:drop-shadow)+
+* background: color image position size repeat attachment
+? background-color+
+? background-image+
+? background-position+
+? background-size
+? background-repeat+
+? background-attachment
+*https://www.youtube.com/playlist?list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr
+
+
+  !Псевдоклассы
+  ? :first-child+
+  ? :last-child+
+  ? :nth-child()+
+  ? :last-of-type+
+  ? :first-of-type+
+
+  !Псевдоэлементы
+  ? ::first-line+
+  ? ::first-letter+
+  ? ::before+
+  ? ::after+
+
+  !Форматы изображений
+  ?webp
+  ? <picture>
+  ?   <source srset="img/pic.webp" type="image/webp">
+  ?   <img src="img/pic.jpg" alt="pic" with="0" height="0">
+  ? </picture>
+*/
+
+
+
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic&display=swap); */
+
+/* @font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('../fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} */
+
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.wrapper {
+  padding: 50px;
+  min-height: 100%;
+  /* overflow: hidden; */
+}
+
+.main-header {
+  font-size: 0;
+}
+
+.main-page {
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  background-color: #191919;
+}
+
+/* *----------------our-promise-to-you--------- */
+/* 
+.our-promise-to-you {
+  max-width: 1020px;
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  border:1px solid #eeeeee;
+}
+
+.subtitle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #5D62B5;
+}
+
+.our-promise-to-you__sub {
+  margin: 0 0 33px 0;
+}
+
+.title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+}
+
+.our-promise-to-you__title {
+  margin: 0 0 68px 0;
+} */
+
+/* *-------------------list------------------- */
+
+/* .our-promise-to-you__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.our-promise-to-you__listitem {
+  display: inline-block;
+  max-width: 324px;
+  padding: 0 3px 1px 0px;
+  margin-right: 24px;
+  font-size: 0;
+}
+
+.our-promise-to-you__listitem:nth-of-type(3n+3) {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.our-promise-to-you__listitem:first-child:before {
+  content: "";
+  display: inline-block;
+  width: 63px;
+  height: 160px;
+  background: url(../img/our-promise-to-you/dog_love_24x.png) 0 0/63px 63px no-repeat;
+}
+
+.our-promise-to-you__listitem:nth-child(2):before {
+  content: "";
+  display: inline-block;
+  width: 63px;
+  height: 160px;
+  background: url(../img/our-promise-to-you/dog_vet_24x.png) 0 0/63px 63px no-repeat;
+}
+
+.our-promise-to-you__listitem:last-child:before {
+  content: "";
+  display: inline-block;
+  width: 63px;
+  height: 160px;
+  background: url(../img/our-promise-to-you/dog_stream_24x.png) 0 0/63px 63px no-repeat;
+}
+
+.list__wrapper {
+  display: inline-block;
+  max-width: 235px;
+  font-size: 0;
+}
+
+.list__title {
+  display: inline-block;
+  margin: 0 0 20px 0;
+  padding-left: 23px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 19px;
+  line-height: 26px;
+  color: #F2726F;
+}
+
+.list__text {
+  margin: 0 0 0 0;
+  padding-left: 23px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #4B4B4B;
+} */
+
+/* *------ Choose how often------- */
+
+.choose-how-often {
+  max-width: 255px;
+  margin: 0 auto;
+  padding: 24px 24px 60px 24px;
+  background: #252525;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.title {
+  margin: 0;
+  font-family: 'HelveticaNeueCyr';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -0.275px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin-top: 10px;
+  margin-bottom: 24px;
+  background: #34C759;
+}
+
+.text {
+  font-family: 'HelveticaNeueCyr';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 18px;
+/* or 138% */
+
+letter-spacing: -0.1625px;
+
+color: rgba(255, 255, 255, 0.5);
+}
