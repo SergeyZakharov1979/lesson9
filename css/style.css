@@ -72,14 +72,14 @@ https://css-live.ru/articles/zagadochnye-otstupy-mezhdu-inlajn-blokami.html
   !Форматы изображений
   ?webp
   ? <picture>
-  ?   <source srset="img/pic.webp" type="image/webp">
+  ?   <source srcset="img/pic.webp" type="image/webp">
   ?   <img src="img/pic.jpg" alt="pic" with="0" height="0">
   ? </picture>
 */
 
 
 
-/* @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic&display=swap); */
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic&display=swap);
 
 /* @font-face {
     font-family: 'HelveticaNeueCyr';
@@ -97,9 +97,10 @@ https://css-live.ru/articles/zagadochnye-otstupy-mezhdu-inlajn-blokami.html
 }
 
 .wrapper {
-  padding: 50px;
+  /* padding: 50px; */
   min-height: 100%;
-  /* overflow: hidden; */
+  overflow: hidden;
+  
 }
 
 .main-header {
@@ -107,22 +108,20 @@ https://css-live.ru/articles/zagadochnye-otstupy-mezhdu-inlajn-blokami.html
 }
 
 .main-page {
-  font-family: 'HelveticaNeueCyr', sans-serif;
-  background-color: #191919;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  background: #f5f5f5;
+  z-index: 1;
 }
 
-/* *----------------our-promise-to-you--------- */
-/* 
-.our-promise-to-you {
+.our-services {
   max-width: 1020px;
   margin: 0 auto;
-  background-color: #F5F5F5;
-  border:1px solid #eeeeee;
+  padding: 110px 0 110px 0;
 }
 
 .subtitle {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   font-size: 12px;
   line-height: 24px;
@@ -131,141 +130,255 @@ https://css-live.ru/articles/zagadochnye-otstupy-mezhdu-inlajn-blokami.html
   color: #5D62B5;
 }
 
-.our-promise-to-you__sub {
-  margin: 0 0 33px 0;
+.subtitle--our-service {
+  margin-bottom: 33px;
+}
+
+.subtitle::before {
+  content:"";
+  display: inline-block;
+  width: 17px;
+  height: 27px;
+  margin: 0 16px 0 0;
+  background: url(../img/our-services/Overline\ Mark.svg) 0 7px no-repeat;
 }
 
 .title {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 900;
   font-size: 36px;
   line-height: 42px;
   color: #000000;
 }
 
-.our-promise-to-you__title {
-  margin: 0 0 68px 0;
-} */
+.title--our-service {
+  margin-bottom: 76px;
+}
 
-/* *-------------------list------------------- */
-
-/* .our-promise-to-you__list {
-  padding: 0;
+.our-services__list {
   margin: 0;
+  padding: 0;
+  margin-bottom: 66px;
   list-style: none;
   font-size: 0;
 }
 
-.our-promise-to-you__listitem {
+.our-services__card {
   display: inline-block;
   max-width: 324px;
-  padding: 0 3px 1px 0px;
-  margin-right: 24px;
-  font-size: 0;
+  min-height: 340px;
+  padding: 50px 43px;
+  text-align: center;
+  background: #ffffff;
+  margin: 0 24px 24px 0;
+  border-radius: 20px;
+  /* z-index: 1; */
 }
 
-.our-promise-to-you__listitem:nth-of-type(3n+3) {
-  padding-right: 0;
+.our-services__card:hover {
+  filter: drop-shadow(0px 8px 16px rgba(38, 38, 38, 0.24)) drop-shadow(0px 16px 24px rgba(38, 38, 38, 0.2));
+}
+
+.our-services__card:nth-child(3n+3){
   margin-right: 0;
 }
 
-.our-promise-to-you__listitem:first-child:before {
-  content: "";
-  display: inline-block;
-  width: 63px;
-  height: 160px;
-  background: url(../img/our-promise-to-you/dog_love_24x.png) 0 0/63px 63px no-repeat;
-}
-
-.our-promise-to-you__listitem:nth-child(2):before {
-  content: "";
-  display: inline-block;
-  width: 63px;
-  height: 160px;
-  background: url(../img/our-promise-to-you/dog_vet_24x.png) 0 0/63px 63px no-repeat;
-}
-
-.our-promise-to-you__listitem:last-child:before {
-  content: "";
-  display: inline-block;
-  width: 63px;
-  height: 160px;
-  background: url(../img/our-promise-to-you/dog_stream_24x.png) 0 0/63px 63px no-repeat;
-}
-
-.list__wrapper {
-  display: inline-block;
-  max-width: 235px;
-  font-size: 0;
-}
-
-.list__title {
-  display: inline-block;
+.card__title {
   margin: 0 0 20px 0;
-  padding-left: 23px;
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 900;
   font-size: 19px;
   line-height: 26px;
   color: #F2726F;
 }
 
-.list__text {
-  margin: 0 0 0 0;
-  padding-left: 23px;
-  font-family: 'Roboto';
-  font-style: normal;
+.card__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.15px;
   color: #4B4B4B;
-} */
-
-/* *------ Choose how often------- */
-
-.choose-how-often {
-  max-width: 255px;
-  margin: 0 auto;
-  padding: 24px 24px 60px 24px;
-  background: #252525;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
 }
 
-.title {
+.card__img {
+ margin: 0 0 33px 0;
+}
+
+.btn-wrap {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #F2726F;
+  border-radius: 5px;
+}
+
+.btn--our-services:hover {
+  background-color: #B55553;
+}
+
+.backgrounds {
+  position: absolute;
+  width: 1322.33px;
+  height: 1197.39px;
+  left: 1000px;
+  top: -410px;
+  background: url(../img/our-services/Blob\ 2.png) 0 0/contain no-repeat;
+  transform: rotate(-6deg);
+  z-index: -1;
+}
+
+/* *--------------------------------- */
+
+.our-promise {
+  max-width: 1020px;
+  margin: 0 auto;
+  margin-bottom: 122px;
+}
+
+.subtitle {}
+
+.subtitle--our-promise {
+  margin-bottom: 33px;
+}
+
+.title {}
+
+.title--our-promise {
+  margin-bottom: 68px;
+}
+
+.our-promise__list {
   margin: 0;
-  font-family: 'HelveticaNeueCyr';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
-  letter-spacing: -0.275px;
-  text-transform: capitalize;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.our-promise__item {
+  display: inline-block;
+  max-width: 324px;
+  margin: 0 24px 0 0;
+}
+
+.our-promise__item:nth-child(3n+3) {
+  margin-right: 0;
+}
+
+.img-wrap {
+  display: inline-block;
+  margin-right: 22px;
+  vertical-align: top;
+}
+
+.wrap-card {
+  display: inline-block;
+  max-width: 235px;
+}
+
+.card-title {}
+
+.card-text {}
+
+/* *------------------------------------- */
+
+.our-impact {
+  padding: 112px 0 212px 0;
+  background: #29C3BE url(../img/our-impact/Blob\ 2.png) 75% 0 no-repeat;
+}
+
+.our-impact__wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.wrap-title {
+  display: inline-block;
+  max-width: 50%;
+  vertical-align: top;
+}
+
+.subtitle__our-impact {
+  max-width: 307px;
+  margin: 0 0 32px 0;
+  color: #ffffff
+}
+
+.subtitle__our-impact::before {
+  content: "";
+  width: 17px;
+  height: 24px;
+  background: url(../img/our-impact/Overline\ Mark.svg) 0 5px no-repeat;
+}
+
+.title__our-impact {
+  max-width: 411px;
+  margin: 0 0 76px 0;
+  color: #ffffff;
+}
+
+.our-impact__img {
+  display: block;
+  max-width: 498px;
+  height: auto;
+  margin: -400px 0 85px auto;
+}
+
+.our-impact__img img {
+  border-radius: 40px;
+}
+
+.list__our-impact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.item__our-impact {
+  display: inline-block;
+  width: 23%;
+  margin: 0 24px 0 0;
+}
+
+.item__our-impact:nth-child(4n+4) {
+  margin-right: 0;
+}
+
+.item__img {
+  display: inline-block;
+  margin: 0 12px 0 0;
+}
+
+.item__wrap {
+  display: inline-block;
+  vertical-align: top-text;
+}
+
+.item__titile {
+  padding: 0;
+  margin: 0;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
   color: #FFFFFF;
 }
 
-.title::after {
-  content: "";
-  display: block;
-  width: 56px;
-  height: 2px;
-  margin-top: 10px;
-  margin-bottom: 24px;
-  background: #34C759;
-}
-
-.text {
-  font-family: 'HelveticaNeueCyr';
-font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 18px;
-/* or 138% */
-
-letter-spacing: -0.1625px;
-
-color: rgba(255, 255, 255, 0.5);
+.item__text {
+  padding: 0;
+  margin: 10px 0 0 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.15px;
+  color: #5D62B5;
 }
